@@ -1,0 +1,220 @@
+section {
+    min-height: 100vh;
+    padding: 20px;
+}
+.menu-sticky {
+position: sticky;
+    top: 0;
+    background-color: #181717;
+    color: rgb(228, 212, 212);
+    padding: 20px 0;
+    text-align: center;
+    z-index: 1000;
+    height: 90px; /* Altura definida explicitamente */
+}
+.menu-sticky nav a {
+    color: azure;
+    text-decoration: none;
+    margin: 0 15px;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav img{
+    width: 70px;
+    border-radius: 15px;
+    /* margin-bottom: 10px; */
+}
+.animamoto{
+    margin-left: 0px;
+    transition: margin-left 2s;
+}
+.animamoto:hover{
+    margin-left: 80px;
+}
+
+.destaque{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.destaque img {
+    width: 350px;
+    border-radius: 15px;
+    border: 2px solid black;
+}
+.destaque p {
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+.venda{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.venda img {
+    width: 250px;
+    border-radius: 15px;
+    border: 2px solid black;
+    margin: 10px;
+}
+.venda p {
+    border: 2px solid black;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+.imgform{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.aviao{
+    width: 90%;
+    margin: 10px;
+}
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 2px black solid;
+    padding: 10px;
+}
+footer{
+color: aliceblue;
+background-color: black;
+}
+@media (width < 700px){
+    .imgform{
+        grid-template-columns: 1fr;
+    }
+    
+}
+.aviao{
+ width: 250px;
+ 
+}
+.painel{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "foto1 foto1 foto1"
+    "foto2 foto2 foto3"
+    "foto4 foto5 foto5"
+    ;
+}
+.foto1{
+    grid-area: foto1;
+    background-image: url("../img/viagem1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150px;
+}
+.foto2{
+    grid-area: foto2;
+    background-image: url("../img/viagem2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}.foto3{
+    grid-area: foto3;
+    background-image: url("../img/viagem3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}.foto4{
+    grid-area: foto4;
+    background-image: url("../img/viagem4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}.foto5{
+    grid-area: foto5;
+    background-image: url("../img/viagem5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media(width>900px){
+    .foto1{
+        height: 200px;
+    }
+}
+/* section{
+min-height: 100px;
+padding: 25px;
+}
+.menu-sticky{
+ position: sticky;
+ top: 0%;
+ background-color: #181717;
+ color: aliceblue;
+ padding: 25px,0;
+} */
+.quadro{
+    width: 90vw;
+    height: 40vw;
+    border:3px rgb(14, 34, 14) solid;
+}
+.azul { 
+  border-radius: 7vw ;
+  width: 10vw;  
+  height: 10vw;
+  background-color: rgb(15, 15, 15); 
+  position: relative;
+  left:15vw;
+  top:15vw;
+
+  animation-name: orbita;  
+  animation-duration: 4s;       
+  animation-iteration-count: infinite; 
+  animation-timing-function:linear;  
+}
+
+.vermelho{   
+  width:8vw;
+  height: 6vw;
+  background-image: url(../img/m6.jpeg);
+  background-size: cover;
+  position:relative;
+  left:45vw;
+  top:10vw;
+
+  animation-name: desloca;  
+  animation-duration: 6s;       
+  animation-iteration-count: infinite;  
+  animation-timing-function:linear;   
+}
+
+@keyframes orbita {
+  0%   {transform:rotate(0deg) 
+                  translate(14vw)
+      }  
+      
+  100% {transform:rotate(360deg)
+                  translate(14vw) 
+      }
+}
+
+@keyframes desloca {
+  0%   {transform: 
+                  translate(0vw)
+                  scale(1)
+      }  
+  50% {transform:
+                  translate(30vw)
+                  scale(2)            
+      }   
+  100% {transform:
+                  translate(0vw) 
+                  scale(1)           
+      }
+}
+
+
+
+
