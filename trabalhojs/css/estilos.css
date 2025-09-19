@@ -1,0 +1,42 @@
+section{
+    border: 2px solid rgb(30, 30, 31);
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+} 
+header img{
+    width: 50%;
+    border-radius: 5px;
+    /* margin-bottom: 5px; */
+}
+
+#erro1{
+    display: none;
+}
+#resposta1{
+    display: none;
+}
+#pergunta2{
+    display: none;
+}
+#pergunta3{
+    display: none;
+}
+
+#erro2{
+    display: none;
+}
+#resposta2{
+    display: none;
+}
+#resposta3{
+    display: none;
+}
+footer {
+    color: rgb(19, 30, 185);
+    margin: 20px;
+}
+
+  
