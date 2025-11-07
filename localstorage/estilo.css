@@ -17,3 +17,14 @@ input[type]{
     padding: 10px;
     border-radius: 10px;
 }
+header{
+    display: flex;
+
+}
+header img{
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
