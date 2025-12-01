@@ -1,0 +1,21 @@
+header {
+    border: solid black 2px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+main{
+    border: solid black 2px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+footer{
+    border: solid black 2px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+nav a{
+    text-decoration: none;
+}

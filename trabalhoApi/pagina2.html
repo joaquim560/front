@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Ola</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+       <h1>Pagina de api</h1>
+       <nav>
+       <a href="Pagina1.html">Pagina1</a>
+       <a href="Pagina2.html">Pagina2</a>
+    </nav>
+    </header>
+    <main>
+        <div id="mostra"></div>
+</main>
+  <footer>desenvolvido por joaquim </footer>
+  <script>
+
+  //  Feriado
+    async function buscaFeriado() {
+    const painel = document.querySelector('#mostra');
+    const url='https://brasilapi.com.br/api/feriados/v1/2026';
+    let resposta=  await fetch(url);
+    let js = await resposta.json();
+    painel.innerHTML+=`<h2>Feriados de 2026</h2>`;
+    for (let index = 0; index < js.length; index++) {
+      painel.innerHTML+=
+         `<br><hr><br>
+          <b>Feriado---${js[index].name}<br>
+          Data---${js[index].date}</b>`;
+      
+    }
+
+}
+
+ //DDD
+ async function buscaDDD() {
+    const painel = document.querySelector('#mostra');
+    const url='https://brasilapi.com.br/api/ddd/v1/54';
+    let resposta=  await fetch(url);
+    let js = await resposta.json();
+  painel.innerHTML+=`<h3>cidades do DDD 54</h3>`;
+    for (let index = 0; index < js.cities.length; index++) {
+      painel.innerHTML+=
+         `<br><hr><br>
+          ${js.cities[index]}<br>
+          `;
+      
+    }
+
+    
+}
+
+//Dolar
+async function buscaDolar() {
+    const painel = document.querySelector('#mostra');
+     const data=new Date();
+     const dataAtual=data.getDate();
+    const url='https://brasilapi.com.br/api/cambio/v1/cotacao/USD/2025-11-13';
+    let resposta=  await fetch(url);
+    let js = await resposta.json();
+  painel.innerHTML+=`<h3>cotação do Dolar</h3>`;
+    
+      painel.innerHTML+=
+         `<br><hr><br> dolar
+          ${js.cotacoes[0].cotacao_compra}<br>
+          `;
+      
+    }
+
+
+//main
+buscaDolar();
+buscaFeriado();
+buscaDDD();
+        
+        
+</script>
+</body>
+</html>
